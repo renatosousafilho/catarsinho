@@ -1,0 +1,15 @@
+<nav class="top-bar">
+    <div class="top-bar-title">
+
+    <strong>Catarsinho</strong>
+    </div>
+    <div class="top-bar-right">
+    <ul class="dropdown menu" data-dropdown-menu>
+        <li><%#= link_to '', root_path %></li>
+        <a href="#"><%= current_user.email %></a>
+        <ul class="menu vertical">
+            <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+        </ul>
+    </ul>
+    </div>
+</nav>
