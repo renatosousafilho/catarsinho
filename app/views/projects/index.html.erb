@@ -8,14 +8,13 @@
     <th>Descrição</th>
     <th>Valor</th>
     <th></th>
-    <th></th>
   </tr>
 
   <% @projects.each do |project| %>
     <tr>
       <td><%= project.title %></td>
       <td><%= project.description %></td>
-      <td><%= number_to_currency(project.target_value) %></td>
+      <td class="text-right"><%= number_to_currency(project.target_value) %></td>
       <td>
         <ul class="dropdown menu" data-dropdown-menu>
           <li>
