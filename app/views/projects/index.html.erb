@@ -1,0 +1,32 @@
+<h1>Meus projetos</h1>
+
+<%= link_to "Novo projeto", new_project_path, class: 'button button-primary' %>
+
+<table>
+  <tr>
+    <th>Título</th>
+    <th>Descrição</th>
+    <th>Valor</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @projects.each do |project| %>
+    <tr>
+      <td><%= project.title %></td>
+      <td><%= project.description %></td>
+      <td><%= number_to_currency(project.target_value) %></td>
+      <td>
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li>
+            <a href="#">Opções</a>
+            <ul class="menu">
+              <li><%= link_to 'Editar', edit_project_path(project) %></li>
+              <li><%= link_to 'Visualizar', project_path(project) %></li>
+            </ul>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  <% end %>
+</table>
