@@ -1,0 +1,10 @@
+pt-BR:
+  activerecord:
+    models:
+      project: Projeto
+    attributes:
+      project:
+        title: 'Título'
+        description: 'Descrição'
+        target_value: 'Valor'
+        picture: 'Imagem'

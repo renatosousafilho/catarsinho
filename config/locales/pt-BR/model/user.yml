@@ -1,0 +1,13 @@
+pt-BR:
+  activerecord:
+    models:
+      user: Usuário
+    attributes:
+      user:
+        name: 'Nome'
+        email: 'E-mail'
+        username: 'Login'
+        registration: 'CPF'
+        current_password: 'Senha atual'
+        password: 'Nova senha'
+        password_confirmation: 'Confirmação'
