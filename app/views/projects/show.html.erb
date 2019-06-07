@@ -1,5 +1,7 @@
 <h1><%= @project.title %></h1>
 
+<%= image_tag(@project.picture_url) if @project.picture? %>
+
 <p><%= @project.description %></p>
 
 <p><%= number_to_currency(@project.target_value) %></p>

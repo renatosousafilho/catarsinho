@@ -50,6 +50,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'foundation-rails'
 gem 'will_paginate'
+gem 'carrierwave', '~> 1.0'
 
 group :test do
   gem 'rspec-rails', '~> 3.8'

@@ -1,7 +1,8 @@
-<%= simple_form_for @project do |f| %>
+<%= simple_form_for @project, html: { multipart: true } do |f| %>
   <%= flash[:error] %>
   <%= f.input :title %>
   <%= f.input :description %>
   <%= f.input :target_value %>
+  <%= f.input :picture %>
   <%= f.submit "Salvar", class: 'btn btn-primary' %>
 <% end %>
