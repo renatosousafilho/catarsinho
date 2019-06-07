@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   before_action :set_project, only: [:edit, :update, :show]
 
   def index
-    @projects = current_user.projects
+    @projects = current_user.projects.paginate(page: params[:page])
   end
 
   def new

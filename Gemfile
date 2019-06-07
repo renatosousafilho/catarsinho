@@ -50,6 +50,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'foundation-rails'
 gem 'will_paginate'
+gem 'will_paginate-foundation' 
 gem 'carrierwave', '~> 1.0'
 
 group :test do
