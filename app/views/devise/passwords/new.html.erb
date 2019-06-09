@@ -1,0 +1,19 @@
+<div class="small-4 large-centered columns">
+  <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: 'log-in-form' }) do |f| %>
+    <h4 class="text-center">Esqueceu seu cadastro?</h4>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :email,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "email" } %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Enviar instrunções de recuperar senha", class: 'button expanded' %>
+    </div>
+
+    <p class="text-center"><%= link_to "Entrar", new_session_path(resource_name) %></p>
+  <% end %>
+</div>
