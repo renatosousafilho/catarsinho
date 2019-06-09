@@ -1,0 +1,17 @@
+<div class="grid-container">
+  <div class="grid-x grid-padding-x small-up-2 medium-up-3">
+    <% @projects.each do |project| %>
+    <div class="cell">
+      <div class="card" style="width: 300px;">
+        <div class="card-divider">
+          <h4><%= project.title %></h4>
+        </div>
+        <%= image_tag project.picture_url if project.picture? %>
+        <div class="card-section">
+          <p><%= project.description %></p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

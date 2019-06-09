@@ -1,6 +1,7 @@
-<h1><%= @project.title %></h1>
+<h1 class="text-center"><%= @project.title %></h1>
 
-<%= image_tag(@project.picture_url) if @project.picture? %>
+
+  <%= image_tag(@project.picture_url, class: "float-center") if @project.picture? %>
 
 <p><%= @project.description %></p>
 

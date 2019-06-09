@@ -2,15 +2,19 @@
     <div class="top-bar-left">
       <ul class="dropdown menu" data-dropdown-menu>
         <li class="menu-text">Catarsinho</li>
-        <li><%= link_to "Projetos", projects_path %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to "Projetos", projects_path %></li>
+        <% end %>
       </ul>
     </div>
     <div class="top-bar-right">
+    <% if user_signed_in? %>
     <ul class="dropdown menu" data-dropdown-menu>
         <a href="#"><%= current_user.email %></a>
         <ul class="menu vertical">
             <li><%= link_to('Sair', destroy_user_session_path, :method => :delete) %></li>
         </ul>
     </ul>
+    <% end %>
     </div>
 </nav>
