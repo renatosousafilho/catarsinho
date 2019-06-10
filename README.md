@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Executar
 
-Things you may want to cover:
+Para executar a aplicação. Recomendo o uso do docker-compose. (https://docs.docker.com/compose/install/)
 
-* Ruby version
+Uma vez instalado, basta executar o comando:
 
-* System dependencies
+```
+docker-compose up
+```
 
-* Configuration
+Para criar o banco e executar as migrations.
 
-* Database creation
+```
+docker-compose run --rm web rails db:create db:migrate
+```
 
-* Database initialization
+## Rodar maintenance
 
-* How to run the test suite
+Esta rake task é uma long running task para verificar os projetos que passaram de 48 horas e marcar estes como expirado. Para executá-lo basta executar o comando abaixo.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+docker-compose run --rm web rails maintenance:maintenance
+```
