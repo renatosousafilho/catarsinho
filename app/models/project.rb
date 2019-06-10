@@ -5,4 +5,6 @@ class Project < ApplicationRecord
   validates_numericality_of :target_value, :greater_than => 0, :less_than_or_equal_to => 500
 
   mount_uploader :picture, PictureUploader
+
+  scope :active, -> { where(expired: false) }
 end
